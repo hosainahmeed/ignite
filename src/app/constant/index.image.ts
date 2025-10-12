@@ -9,3 +9,12 @@ export const IMAGE = {
     brandV2,
     bannerImage
 }
+
+import fire from "@/../public/assets/icons/fire.svg"
+import archer from "@/../public/assets/icons/archar.svg"
+import idea from "@/../public/assets/icons/idea.svg"
+export const ICONS = {
+    fire,
+    archer,
+    idea
+}

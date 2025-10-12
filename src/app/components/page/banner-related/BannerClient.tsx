@@ -25,7 +25,7 @@ const BannerClient = ({ title, description, image }: BannerProps) => {
     return (
         <section
             ref={sectionRef}
-            className="w-full h-fit py-16 md:pb-28 flex items-center justify-center bg-[#F5F7FA]"
+            className="w-full min-h-[calc(100dvh-60px)] py-16 md:pb-28 flex items-center justify-center bg-[#F5F7FA]"
             aria-labelledby="banner-title"
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,14 +44,14 @@ const BannerClient = ({ title, description, image }: BannerProps) => {
                             id="banner-title"
                             variants={textVariants}
                             style={{ fontFamily: 'sans-serif' }}
-                            className="font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-6xl leading-tight sm:leading-tight lg:leading-tight text-gray-900 mb-6"
+                            className="font-bold text-4xl text-[#003F91] sm:text-5xl lg:text-6xl xl:text-6xl leading-tight sm:leading-tight lg:leading-tight mb-6"
                         >
                             {title}
                         </motion.h1>
 
                         <motion.p
                             variants={textVariants}
-                            className="font-normal text-lg sm:text-xl lg:text-3xl leading-relaxed text-gray-600 mb-8 max-w-3xl"
+                            className="font-normal text-lg leading-relaxed text-gray-600 mb-8 tracking-wide max-w-3xl"
                         >
                             {description}
                         </motion.p>
@@ -62,14 +62,15 @@ const BannerClient = ({ title, description, image }: BannerProps) => {
                             className="flex flex-col md:flex-row gap-4 justify-center lg:justify-start"
                         >
                             <Link href='/browse-events'>
-                                <button className="primary-btn px-6 text-lg py-6 rounded cursor-pointer hover:!bg-white hover:!text-[#BF0A30]">
-                                    Find Events
+                                <button className="bg-gradient-to-r text-white from-[#BF0A30] to-[#003F91] px-6 text-lg py-4 rounded cursor-pointer hover:!bg-white hover:!text-[#BF0A30]">
+                                    Donate Now
                                 </button>
                             </Link>
 
-                            {role === null && <Link href="/list-events"> <button className={cn("px-6 py-6 text-lg rounded border hover:!bg-white hover:!text-[#BF0A30]", "bg-white text-[#BF0A30] border-[#BF0A30] cursor-pointer")}>
-                                List Your Event
-                            </button></Link>}
+                            {role === null && <Link href="/list-events">
+                                <button className={cn("px-6 py-4 text-lg rounded border border-regal-blue hover:!bg-white hover:!text-[#BF0A30]", "bg-white text-[#BF0A30] border-[#BF0A30] cursor-pointer")}>
+                                    Nominate an Athlete
+                                </button></Link>}
                         </motion.div>
                     </motion.div>
 

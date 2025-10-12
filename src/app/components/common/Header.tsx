@@ -20,7 +20,7 @@ function Header() {
     ]
     
     return (
-        <header className="sticky top-0 z-50 border-b bg-white border-border  backdrop-blur">
+        <header className="sticky top-0 z-50 border-b border-gray-300 bg-white backdrop-blur">
             <div
                 className="container mx-auto flex h-16 items-center bg-transparent  justify-between px-4 sm:px-6 lg:px-8">
                 <div onClick={() => router.push('/')} className="text-xl font-bold  cursor-pointer text-foreground">

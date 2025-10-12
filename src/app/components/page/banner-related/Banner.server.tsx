@@ -6,8 +6,8 @@ import { BannerProps } from '@/app/types/banner';
 
 export const BannerServer = () => {
     const bannerData: BannerProps = {
-        title: "Find the Perfect Youth Sport Event — Fast.",
-        description: "Tryouts, Camps, Tournaments. All in One Place. All Across America.",
+        title: "Be The Spark",
+        description: `The IGNITE Foundation is working to remove the socioeconomic "pay to play" barrier in US youth sports. Enabling talented young athletes access to high level coaching & programming, to follow their dreams. Be The Spark and support them on their journey`,
         image: {
             src: "/assets/image/index.image/banner-image.jpg",
             alt: "Youth athletes participating in various sports events",
