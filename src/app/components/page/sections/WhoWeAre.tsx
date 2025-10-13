@@ -54,7 +54,7 @@ const stats = [
     },
 ];
 
-function OurImpact() {
+function WhoWeAre() {
     return (
         <section
             className="w-full bg-gray-50 py-12"
@@ -76,7 +76,7 @@ function OurImpact() {
                     </p>
                     <Button
                         asChild
-                        className="bg-gradient-to-r text-white from-[#BF0A30] to-[#003F91] px-6 text-lg py-6 rounded cursor-pointer hover:!bg-white hover:!text-[#BF0A30]"
+                        className="bg-gradient-to-r text-white from-[#BF0A30] to-[#003F91] px-6 text-lg py-6 rounded cursor-pointer hover:!bg-white hover:!text-white"
                     >
                         <a href="/choose-role" aria-label="Get started with our platform">
                             Learn more
@@ -112,4 +112,4 @@ function OurImpact() {
     );
 }
 
-export default OurImpact;
+export default WhoWeAre;

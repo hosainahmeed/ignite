@@ -61,14 +61,14 @@ const BannerClient = ({ title, description, image }: BannerProps) => {
                             variants={containerVariants}
                             className="flex flex-col md:flex-row gap-4 justify-center lg:justify-start"
                         >
-                            <Link href='/browse-events'>
-                                <button className="bg-gradient-to-r text-white from-[#BF0A30] to-[#003F91] px-6 text-lg py-4 rounded cursor-pointer hover:!bg-white hover:!text-[#BF0A30]">
+                            <Link href='/donate'>
+                                <button className="bg-gradient-to-r text-white from-[#BF0A30] to-[#003F91] px-6 text-lg py-4 rounded cursor-pointer hover:!bg-white hover:!text-white">
                                     Donate Now
                                 </button>
                             </Link>
 
                             {role === null && <Link href="/list-events">
-                                <button className={cn("px-6 py-4 text-lg rounded border border-regal-blue hover:!bg-white hover:!text-[#BF0A30]", "bg-white text-[#BF0A30] border-[#BF0A30] cursor-pointer")}>
+                                <button className={cn("px-6 py-4 text-lg rounded border border-regal-blue hover:!bg-white hover:!text-white", "bg-white text-[#BF0A30] border-[#BF0A30] cursor-pointer")}>
                                     Nominate an Athlete
                                 </button></Link>}
                         </motion.div>
