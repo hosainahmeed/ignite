@@ -33,6 +33,10 @@ const themeConfig: ThemeConfig = {
       buttonSolidCheckedHoverBg: 'rgb(127,132,139)',
       borderRadius: 1,
     },
+    Checkbox: {
+      colorPrimary: "rgb(0,0,0)",
+      colorPrimaryHover: "rgb(0,0,0)"
+    }
   },
 };
 

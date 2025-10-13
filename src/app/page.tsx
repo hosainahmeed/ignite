@@ -8,8 +8,10 @@ import WhyDoWeNeed from "./components/page/sections/WhyDoWeNeed"
 import DiscoverBanner from "./components/status-banner/DiscoverBanner"
 
 function page() {
+
   return (
-    <div className='bg-[#F5F7FA] flex items-center justify-center flex-col gap-0 md:gap-[120px]'>
+    <div
+      className='bg-[#F5F7FA] flex items-center justify-center flex-col gap-0 md:gap-[120px]'>
       <BannerServer />
       <BeTheSpark />
       <WhoWeAre />
