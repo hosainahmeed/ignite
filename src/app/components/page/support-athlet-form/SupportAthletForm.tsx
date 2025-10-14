@@ -46,9 +46,8 @@ function SupportAthletForm() {
     })()
 
     const onValuesChange = (changed: any) => {
-
         if (changed.fund === 'IGNITE a Child') {
-            form.setFieldsValue({ frequency: undefined })
+            form.setFieldsValue({ frequency: undefined, amountTier: 'Custom', customAmount: 1000 })
         }
 
         if (changed.amountTier && changed.amountTier !== 'Custom') {
