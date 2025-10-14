@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/common/Header";
 import ReduxProvider from "./providers/ReduxProvider";
 import { ConfigProvider, ThemeConfig } from "antd";
+import Footer from "./components/common/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,6 +56,7 @@ export default function RootLayout({
           <ConfigProvider theme={themeConfig}>
             {children}
           </ConfigProvider>
+          <Footer />
         </ReduxProvider>
       </body>
     </html>

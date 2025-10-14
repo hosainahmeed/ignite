@@ -1,117 +1,147 @@
 'use client'
-import Image from 'next/image'
-import Link from 'next/link'
-import { FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn } from 'react-icons/fa6'
-import { IMAGE } from '@/app/constant/index.image'
-
+import Link from 'next/link';
+import { Facebook, Twitter, Youtube, Linkedin, Mail } from 'lucide-react';
+import Image from 'next/image';
+import { useCallback, useEffect, useState } from 'react';
+import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import { IMAGE } from '@/app/constant/index.image';
 const Footer = () => {
-    const currentYear = new Date().getFullYear()
+    const currentYear = new Date().getFullYear();
+    const getUserData = useCallback(() => {
+        if (typeof window === 'undefined') return null;
 
+        try {
+            const user = localStorage.getItem('user');
+            return user ? JSON.parse(user) : null;
+        } catch (error) {
+            console.error('Error parsing user data:', error);
+            return null;
+        }
+    }, []);
+
+
+    const footerLinks = {
+        resources: [
+            { label: 'About Us', href: '/about-us' },
+            { label: 'Contact Us', href: '/contact-help' },
+            { label: 'FAQ', href: '/faq' },
+        ],
+        quickLinks: [
+            { label: 'Home', href: '/' },
+            { label: 'Nominate an Athlete', href: '/ignite-my-child' },
+            { label: 'Clubs & Academies', href: '/join-our-club' },
+            { label: 'Privacy Policy', href: '/privacy' },
+            { label: 'Terms of Condition', href: '/terms' }
+        ],
+        social: [
+            { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
+            { icon: FaXTwitter, href: 'https://twitter.com', label: 'Twitter' },
+            { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+            { icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
+        ],
+    };
     return (
-        <footer className="relative overflow-hidden bg-[#2F3E52] text-white">
-            <div className="absolute -left-20 bottom-10 h-48 w-48 rounded-full bg-gradient-to-tr from-gray-500/20 to-transparent blur-3xl" />
-            <div className="absolute -top-20 right-0 h-64 w-64 rounded-full bg-gradient-to-tr from-gray-400/30 to-transparent blur-3xl" />
-
-            <div className="relative z-10 mx-auto max-w-7xl px-6 py-12 md:py-16">
-                <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-                    <div className="space-y-4">
-                        <Image
-                            src={IMAGE.brandV2 || '/logo.svg'}
-                            alt="IGNITE Foundation Logo"
-                            width={180}
-                            height={60}
-                            className="object-contain"
-                        />
-
-                        <div className="space-y-2 text-sm md:text-base text-gray-200">
-                            <p>
-                                <span className="font-semibold text-white">Email:</span>{' '}
-                                <Link href="mailto:contactus@ignitefoundation.us" className="hover:underline">
-                                    contactus@ignitefoundation.us
-                                </Link>
-                            </p>
-                            <p>
-                                <span className="font-semibold text-white">Location:</span>{' '}
-                                12222 Merit Drive, #130 Dallas, TX 75251
-                            </p>
-                            <p>
-                                <span className="font-semibold text-white">
-                                    Public Charity & Tax Exempt under IRS Code :
-                                </span>{' '}
-                                501(c)(3)
-                            </p>
-                            <p>
-                                <span className="font-semibold text-white">Tax ID:</span> EIN 39-2824042
-                            </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 className="mb-4 text-lg font-semibold text-white">Resources</h3>
-                        <ul className="space-y-3 text-gray-200">
-                            {[
-                                { label: 'About Us', href: '/about-us' },
-                                { label: 'Contact Us', href: '/contact-us' },
-                                { label: 'FAQ', href: '/faq' },
-                            ].map((item) => (
-                                <li key={item.href}>
-                                    <Link href={item.href} className="hover:text-white hover:underline">
-                                        {item.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
-                        <ul className="space-y-3 text-gray-200">
-                            {[
-                                { label: 'Home', href: '/' },
-                                { label: 'Nominate an Athlete', href: '/nominate' },
-                                { label: 'Clubs & Academies', href: '/clubs' },
-                                { label: 'Privacy Policy', href: '/privacy' },
-                                { label: 'Terms of Condition', href: '/terms' },
-                            ].map((item) => (
-                                <li key={item.href}>
-                                    <Link href={item.href} className="hover:text-white hover:underline">
-                                        {item.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 className="mb-4 text-lg font-semibold text-white">Follow Us On</h3>
-                        <div className="flex gap-3 mb-5">
-                            {[
-                                { icon: FaFacebookF, href: 'https://facebook.com', label: 'Facebook' },
-                                { icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
-                                { icon: FaXTwitter, href: 'https://twitter.com', label: 'Twitter' },
-                                { icon: FaLinkedinIn, href: 'https://linkedin.com', label: 'LinkedIn' },
-                            ].map(({ icon: Icon, href, label }) => (
+        <footer
+            style={{
+                backgroundImage: `url(${IMAGE.footersImage.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+            }}
+            className="bg-[#0a1f44] text-white" role="contentinfo">
+            <div className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    {/* Brand Section */}
+                    <section  aria-labelledby="brand-heading">
+                        <Link href="/" className="inline-flex items-center gap-2 group" aria-label="IGNITE Foundation">
+                            <Image src={IMAGE.brandV2} alt="Logo" width={150} height={50} />
+                        </Link>
+                        <address className="space-y-2">
+                            <span className="text-sm text-gray-300 lg:text-base">
                                 <Link
-                                    key={label}
-                                    href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={label}
-                                    className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2563EB] transition-transform hover:scale-110 hover:bg-[#1D4ED8]"
+                                    href="mailto:contactus@ignitefoundation.us"
+                                    className="inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-white lg:text-base"
+                                    aria-label="Email us at contactus@ignitefoundation.us"
                                 >
-                                    <Icon className="h-5 w-5" />
+                                    <Mail className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
+                                    Email: contactus@ignitefoundation.us
                                 </Link>
-                            ))}
-                        </div>
+                            </span>
+                            <p className="text-sm text-gray-300">Location: 12222 Merit Drive, #130 Dallas, TX 75251</p>
+                            <p className="text-sm text-gray-300">Public Charity & Tax Exempt under IRS Code : 501(c)(3)</p>
+                            <p className="text-sm text-gray-300">Tax ID: EIN 39-2824042</p>
+                        </address>
+                    </section>
 
-                        <p className="text-sm text-gray-300">
+                    {/* Resources Section */}
+                    <nav className="space-y-4" aria-labelledby="resources-heading">
+                        <h3 id="resources-heading" className="text-lg font-semibold lg:text-xl">
+                            Resources
+                        </h3>
+                        <ul className="space-y-3">
+                            {footerLinks.resources.map((link) => (
+                                <li key={link.href}>
+                                    <Link
+                                        href={link.href}
+                                        className="text-sm text-gray-300 transition-colors hover:text-white hover:underline lg:text-base"
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+
+                    {/* Quick Links Section */}
+                    <nav className="space-y-4" aria-labelledby="quick-links-heading">
+                        <h3 id="quick-links-heading" className="text-lg font-semibold lg:text-xl">
+                            Quick Links
+                        </h3>
+                        <ul className="space-y-3">
+                            {footerLinks.quickLinks.map((link) => (
+                                <li key={link.href}>
+                                    <Link
+                                        href={link.href}
+                                        className="text-sm text-gray-300 transition-colors hover:text-white hover:underline lg:text-base"
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+
+                    {/* Social Media Section */}
+                    <section className="space-y-4" aria-labelledby="social-heading">
+                        <h3 id="social-heading" className="text-lg font-semibold lg:text-xl">
+                            Follow Us On
+                        </h3>
+                        <div className="flex gap-3">
+                            {footerLinks.social.map((social) => {
+                                const Icon = social.icon;
+                                return (
+                                    <a
+                                        key={social.label}
+                                        href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 transition-all hover:bg-blue-700 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-[#0a1f44]"
+                                        aria-label={`Follow us on ${social.label}`}
+                                    >
+                                        <Icon className="h-5 w-5" aria-hidden="true" />
+                                    </a>
+                                );
+                            })}
+                        </div>
+                        <p className="text-sm text-gray-400 lg:text-base">
                             © {currentYear} IGNITE Foundation
                         </p>
-                    </div>
+                    </section>
                 </div>
             </div>
         </footer>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;

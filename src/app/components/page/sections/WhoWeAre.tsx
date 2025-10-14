@@ -78,7 +78,7 @@ function WhoWeAre() {
                         asChild
                         className="bg-gradient-to-r text-white from-[#BF0A30] to-[#003F91] px-6 text-lg py-6 rounded cursor-pointer hover:!bg-white hover:!text-white"
                     >
-                        <a href="/choose-role" aria-label="Get started with our platform">
+                        <a href="/mission-vision" aria-label="Get started with our platform">
                             Learn more
                         </a>
                     </Button>

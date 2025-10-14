@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -12,15 +12,6 @@ import { IMAGE } from '@/app/constant/index.image';
 const BannerClient = ({ title, description, image }: BannerProps) => {
     const sectionRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
-
-    const [role, setRole] = useState<'login-user' | 'org' | null>(null)
-    useEffect(() => {
-        if (localStorage) {
-            const user = localStorage.getItem('user');
-            const Userdata = user ? JSON.parse(user) : null
-            setRole(Userdata ? Userdata?.role : null);
-        }
-    }, [])
 
     return (
         <section
@@ -67,10 +58,10 @@ const BannerClient = ({ title, description, image }: BannerProps) => {
                                 </button>
                             </Link>
 
-                            {role === null && <Link href="/list-events">
-                                <button className={cn("px-6 py-4 text-lg rounded border border-regal-blue hover:!bg-white hover:!text-white", "bg-white text-[#BF0A30] border-[#BF0A30] cursor-pointer")}>
+                            <Link href="/ignite-my-child">
+                                <button className={cn("px-6 py-4 text-lg rounded border border-regal-blue cursor-pointer", "bg-white text-[#BF0A30] border-[#BF0A30] cursor-pointer")}>
                                     Nominate an Athlete
-                                </button></Link>}
+                                </button></Link>
                         </motion.div>
                     </motion.div>
 
