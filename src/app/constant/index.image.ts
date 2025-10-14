@@ -44,11 +44,13 @@ import idea from "@/../public/assets/icons/idea.svg"
 import magnifire from "@/../public/assets/icons/magnifire.svg"
 import stadium from "@/../public/assets/icons/stadium.svg"
 import roket from "@/../public/assets/icons/roket.svg"
+import imageFrame from "@/../public/assets/icons/ImageFrame.png"
 export const ICONS = {
     fire,
     archer,
     idea,
     magnifire,
     stadium,
-    roket
+    roket,
+    imageFrame
 }

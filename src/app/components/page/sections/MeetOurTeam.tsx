@@ -30,23 +30,23 @@ function MeetOurTeam() {
         },
         {
             name: "John Doe",
-            src: ICONS.fire.src,
+            src: ICONS.imageFrame.src,
             position: "FOUNDER & CEO",
         },
         {
             name: "John Doe",
-            src: ICONS.fire.src,
+            src: ICONS.imageFrame.src,
             position: "FOUNDER & CEO",
         },
         {
             name: "John Doe",
-            src: ICONS.fire.src,
+            src: ICONS.imageFrame.src,
             position: "FOUNDER & CEO",
         },
     ]
 
     return (
-        <div className='container px-2 mx-auto'>
+        <div className='max-w-7xl px-2 mx-auto'>
             <SectionHeaderText
                 title='Meet Our Team'
                 description='Our dedicated team works tirelessly to ignite the potential of every young athlete. Get to know the people making it all possible.'
@@ -73,7 +73,7 @@ const TeamMember = ({ name, src, position }: teamTypes) => {
                     alt={`${name} Image`}
                     width={400}
                     height={400}
-                    className='w-full h-full object-contain md:object-cover'
+                    className='w-full h-full object-center object-contain md:object-cover'
                 />
             </div>
             <div className='p-2'>
