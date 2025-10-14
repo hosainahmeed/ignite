@@ -161,10 +161,10 @@ function SupportAthletForm() {
                         <h1>{summaryTitle}</h1>
                         <p>{formatCurrency(baseAmount)}</p>
                     </div>
-                    <div className='flex w-full justify-between'>
+                    {coverFee && <div className='flex w-full justify-between'>
                         <p>3% Cover the Fee</p>
                         <p>{formatCurrency(fee)}</p>
-                    </div>
+                    </div>}
                     <Divider />
                     <div className='flex w-full justify-between'>
                         <h1>Total</h1>
