@@ -4,7 +4,7 @@ import React from 'react';
 function SocialIcons() {
     return (
         <div className="flex items-center justify-center gap-4">
-            <Link href="https://www.facebook.com/">
+            <Link target='_blank' href="https://www.facebook.com/">
                 <div className="hover:cursor-pointer">
                     <svg
                         width="28"
@@ -20,7 +20,7 @@ function SocialIcons() {
                     </svg>
                 </div>
             </Link>
-            <Link href="https://www.twitter.com/">
+            <Link target='_blank' href="https://www.twitter.com/">
                 <div className="hover:cursor-pointer">
                     <svg
                         width="28"
@@ -40,7 +40,7 @@ function SocialIcons() {
                     </svg>
                 </div>
             </Link>
-            <Link href="https://www.linkedin.com/">
+            <Link target='_blank' href="https://www.linkedin.com/">
                 <div className="hover:cursor-pointer">
                     <svg
                         width="28"
@@ -56,7 +56,7 @@ function SocialIcons() {
                     </svg>
                 </div>
             </Link>
-            <Link href="https://www.youtube.com/">
+            <Link target='_blank' href="https://www.youtube.com/">
                 <div className="hover:cursor-pointer">
                     <svg
                         width="28"
