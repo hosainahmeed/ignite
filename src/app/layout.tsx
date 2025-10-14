@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 const themeConfig: ThemeConfig = {
   token: {
-    borderRadius: 1,
+    borderRadius: 4,
     fontSize: 16,
   },
   components: {

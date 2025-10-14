@@ -27,6 +27,7 @@ function SupportAthletForm() {
     const frequency = Form.useWatch<Frequency>('frequency', form)
 
     const baseAmount = (() => {
+        if (fund === 'IGNITE a Child') return 1000
         if (tier === 'Custom') return Number(customAmount) || 0
         if (!tier) return 0
         return AMOUNT_MAP[tier]
@@ -36,9 +37,20 @@ function SupportAthletForm() {
     const total = +(baseAmount + fee).toFixed(2)
 
     const showFrequency = fund === 'IGNITE Fund'
-    const showCustom = tier === 'Custom'
+    const showCustom = tier === 'Custom' && fund === 'IGNITE Fund'
+
+    const amountOptions = fund === 'IGNITE a Child'
+        ? [{ value: 'Custom', label: '$1000' }]
+        : [
+            { value: 'Spark', label: 'Spark ($10)' },
+            { value: 'Flame', label: 'Flame ($25)' },
+            { value: 'Blaze', label: 'Blaze ($50)' },
+            { value: 'Inferno', label: 'Inferno ($100)' },
+            { value: 'Custom', label: 'Custom amount' },
+        ]
 
     const summaryTitle = (() => {
+        if (fund === 'IGNITE a Child') return 'IGNITE a Child Donation'
         if (!tier) return 'Donation Summary'
         const freqLabel = showFrequency && frequency ? ` ${frequency}` : ''
         const tierLabel = tier === 'Custom' ? 'Custom' : tier
@@ -103,13 +115,8 @@ function SupportAthletForm() {
                     <Select
                         size='large'
                         placeholder="Donation Amount"
-                        options={[
-                            { value: 'Spark', label: 'Spark ($10)' },
-                            { value: 'Flame', label: 'Flame ($25)' },
-                            { value: 'Blaze', label: 'Blaze ($50)' },
-                            { value: 'Inferno', label: 'Inferno ($100)' },
-                            { value: 'Custom', label: 'Custom amount' },
-                        ]}
+                        options={amountOptions}
+                        disabled={fund === 'IGNITE a Child'}
                     />
                 </Form.Item>
 
