@@ -26,6 +26,7 @@ const BannerClient = ({ title, description, image }: BannerProps) => {
                     animate={isInView ? "visible" : "hidden"}
                     className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16"
                 >
+                
                     {/* Text Content */}
                     <motion.div
                         variants={containerVariants}

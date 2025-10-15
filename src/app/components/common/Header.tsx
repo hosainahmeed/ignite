@@ -28,7 +28,7 @@ function Header() {
         { href: '/contact-us', label: 'Contact us' },
     ]
 
-    
+
     const mobileMenuVariants: Variants = {
         closed: {
             opacity: 0,
@@ -106,13 +106,13 @@ function Header() {
                             width={150}
                             height={40}
                             alt='IGNITE'
-                            className="w-32 h-auto sm:w-36 md:w-40 lg:w-44"
+                            className="w-32 h-auto sm:w-36 lg:w-40"
                             priority
                         />
                     </motion.div>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center gap-6">
+                    <nav className="hidden lg:flex items-center gap-6">
                         {NavLink.map((item, index) => (
                             <motion.div
                                 key={item.href}
@@ -133,6 +133,9 @@ function Header() {
                                 </Link>
                             </motion.div>
                         ))}
+                        <Link href="/join-our-club">
+                            <h1 className="text-base bg-gradient-to-r from-[#BF0A30] to-[#003F91] text-white px-3 py-1 inset-0 border border-gray-200 cursor-pointer bg-white w-fit rounded-full font-bold">Join the Be The Spark Club</h1>
+                        </Link>
                     </nav>
 
                     {/* Mobile Menu Button */}
@@ -140,7 +143,7 @@ function Header() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => setIsMobileMenuOpen(true)}
-                        className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                        className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
                         aria-label="Open menu"
                     >
                         <MdMenu className="w-6 h-6 text-gray-700" />
@@ -158,7 +161,7 @@ function Header() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="fixed inset-0 bg-black/50 z-50 md:hidden"
+                            className="fixed inset-0 bg-black/50 z-50 lg:hidden"
                         />
 
                         {/* Mobile Menu Panel */}
@@ -167,7 +170,7 @@ function Header() {
                             initial="closed"
                             animate="open"
                             exit="closed"
-                            className="fixed top-0 right-0 bottom-0 w-80 max-w-full bg-white z-50 md:hidden shadow-xl"
+                            className="fixed top-0 right-0 bottom-0 w-80 max-w-full bg-white z-50 lg:hidden shadow-xl"
                         >
                             <div className="flex flex-col h-full">
                                 {/* Header */}
@@ -224,6 +227,9 @@ function Header() {
                                                 </button>
                                             </motion.div>
                                         ))}
+                                        <Link href="/join-our-club">
+                                            <h1 className="text-base bg-gradient-to-r from-[#BF0A30] to-[#003F91] text-white px-3 py-1 inset-0 border border-gray-200 cursor-pointer bg-white w-fit rounded-full font-bold">Join the Be The Spark Club</h1>
+                                        </Link>
                                     </div>
                                 </motion.nav>
 
