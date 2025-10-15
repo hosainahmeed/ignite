@@ -40,7 +40,7 @@ function Page() {
                         </p>
 
                         <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                            Your membership fee helps fuel the fire – your annual payment goes directly into the IGNITE fund, supporting youth athletes in achieving their goals.
+                            Your membership puts you in the network where we will connect talented youth with coaching opportunities, while your tax-deductible subscription goes directly towards our IGNITE fund
                         </p>
 
 
@@ -93,15 +93,16 @@ function Page() {
                         </button>
                     </div>
 
-
                     <div className="w-full hidden md:flex md:w-1/2  justify-center">
-                        <Image
-                            src={IMAGE.join.src}
-                            alt="Be The Spark Club"
-                            width={500}
-                            height={500}
-                            className="object-contain"
-                        />
+                        <div className="p-2 bg-gradient-to-r from-[#BF0A30] to-[#003F91] rounded">
+                            <Image
+                                src={IMAGE.join.src}
+                                alt="Be The Spark Club"
+                                width={500}
+                                height={500}
+                                className="object-contain rounded"
+                            />
+                        </div>
                     </div>
                 </div>
             </SectionLayout>

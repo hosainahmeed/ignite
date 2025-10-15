@@ -25,7 +25,7 @@ function Header() {
         { href: '/about-us', label: 'About Us' },
         { href: '/mission-vision', label: 'Mission & Vision' },
         { href: '/donate', label: 'Donate' },
-        { href: '/contact-help', label: 'Contact / Help' },
+        { href: '/contact-us', label: 'Contact us' },
     ]
 
     

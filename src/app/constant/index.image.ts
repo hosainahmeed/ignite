@@ -3,7 +3,7 @@ import footersImage from "@/../public/assets/image/Footers.svg"
 import brandV2 from "@/../public/assets/image/brandV2.png"
 import bannerImage from "@/../public/assets/image/banenrImage.webp"
 import sockerKid from "@/../public/assets/image/socker-kid.webp"
-import join from "@/../public/assets/image/join.webp"
+import join from "@/../public/assets/image/join.png"
 import slideImage1 from "@/../public/assets/image/slide-1.webp"
 import slideImage2 from "@/../public/assets/image/slide-2.png"
 import slideImage3 from "@/../public/assets/image/slide-3.png"
@@ -16,6 +16,8 @@ import whoWeAre from "@/../public/assets/image/Who We Are.png"
 import ourStory from "@/../public/assets/image/Our Story.png"
 import whatDrivesUs from "@/../public/assets/image/What Drives Us.png"
 import howWeIgniteChange from "@/../public/assets/image/How We Ignite Change.png"
+import SECRETARY from "@/../public/assets/image/SECRETARY.png"
+import students from "@/../public/assets/image/sports-teacher-with-her-students.jpg"
 
 export const IMAGE = {
     happyBanner,
@@ -32,10 +34,12 @@ export const IMAGE = {
     contactImage,
     ceo,
     vice,
+    SECRETARY,
     whoWeAre,
     ourStory,
     whatDrivesUs,
-    howWeIgniteChange
+    howWeIgniteChange,
+    students
 }
 
 import fire from "@/../public/assets/icons/fire.svg"

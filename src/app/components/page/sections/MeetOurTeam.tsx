@@ -16,32 +16,32 @@ function MeetOurTeam() {
         {
             name: "Neil Marshall",
             src: IMAGE.ceo.src,
-            position: "BOARD CHAIR",
+            position: "BOARD CHAIR & CEO",
         },
         {
             name: "Kyla Marshall",
             src: IMAGE.vice.src,
-            position: "VICE CHAIR",
+            position: "VICE CHAIR & Chief Program Officer",
         },
         {
             name: "Benja Lazcano",
-            src: IMAGE.ceo.src,
-            position: "BOARD SECRETARY",
+            src: IMAGE.SECRETARY.src,
+            position: "BOARD SECRETARY & Chief of Staff",
         },
         {
-            name: "John Doe",
+            name: "To Be Hired (Neil Marshall – Acting)",
             src: ICONS.imageFrame.src,
-            position: "FOUNDER & CEO",
+            position: "TREASURER & Director of Finance",
         },
         {
-            name: "John Doe",
+            name: "To Be Hired",
             src: ICONS.imageFrame.src,
-            position: "FOUNDER & CEO",
+            position: "BOARD COUNSEL & Director of Legal & Compliance",
         },
         {
-            name: "John Doe",
+            name: "To be Filled",
             src: ICONS.imageFrame.src,
-            position: "FOUNDER & CEO",
+            position: "BOARD ADVISOR",
         },
     ]
 

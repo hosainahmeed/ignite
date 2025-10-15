@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 function ContactPage() {
   return (
     <div className="min-h-dvh">
-      <PageTopBanner title='Contact Us' description='The Sport families are searching for most — find events in one click.' />
+      <PageTopBanner title='Contact Us' description='Do you want to Be The Spark - reach us in one click' />
       <div className="container  mx-auto px-4 py-8">
         <div className="grid bg-[#e6ecf5] shadow-lg rounded-2xl lg:grid-cols-12 gap-8 max-w-6xl mx-auto">
           {/* Left Sidebar - Green Section */}
@@ -36,13 +36,6 @@ function ContactPage() {
           {/* Right Content - Form Section */}
           <div className="lg:col-span-8 p-8 rounded-r-lg lg:rounded-l-none rounded-l-lg">
             <div className="max-w-2xl">
-              <h2 className="text-3xl font-bold text-gray-800 mb-2">
-                Contact Us
-              </h2>
-              <p className="text-gray-600 mb-8">
-                The Sport families are searching for most — find events in one click.
-              </p>
-
               <ContactForm />
             </div>
           </div>

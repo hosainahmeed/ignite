@@ -18,12 +18,19 @@ function JoinOurNetwork() {
                     ]}
                     buttonText='Join Now'
                     route="/join-our-club"
-                     />
+                />
             </div>
-            <div className='flex-1'>
-                <Image src={IMAGE.join} alt="Be IGNITED" width={500} height={500} />
+            <div className="flex-1 p-2 bg-gradient-to-r from-[#BF0A30] to-[#003F91] rounded">
+                <div className="bg-white rounded">
+                    <Image
+                        className="w-full rounded"
+                        src={IMAGE.join}
+                        alt="Be IGNITED"
+                        width={500}
+                        height={500}
+                    />
+                </div>
             </div>
-
         </section>
     )
 }

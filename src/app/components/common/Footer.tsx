@@ -1,30 +1,18 @@
 'use client'
 import Link from 'next/link';
-import { Facebook, Twitter, Youtube, Linkedin, Mail } from 'lucide-react';
+import { Facebook, Linkedin, Mail } from 'lucide-react';
 import Image from 'next/image';
-import { useCallback, useEffect, useState } from 'react';
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { IMAGE } from '@/app/constant/index.image';
 const Footer = () => {
     const currentYear = new Date().getFullYear();
-    const getUserData = useCallback(() => {
-        if (typeof window === 'undefined') return null;
-
-        try {
-            const user = localStorage.getItem('user');
-            return user ? JSON.parse(user) : null;
-        } catch (error) {
-            console.error('Error parsing user data:', error);
-            return null;
-        }
-    }, []);
 
 
     const footerLinks = {
         resources: [
             { label: 'About Us', href: '/about-us' },
-            { label: 'Contact Us', href: '/contact-help' },
+            { label: 'Contact Us', href: '/contact-us' },
             { label: 'FAQ', href: '/faq' },
         ],
         quickLinks: [
@@ -32,7 +20,7 @@ const Footer = () => {
             { label: 'Nominate an Athlete', href: '/ignite-my-child' },
             { label: 'Clubs & Academies', href: '/join-our-club' },
             { label: 'Privacy Policy', href: '/privacy' },
-            { label: 'Terms of Condition', href: '/terms' }
+            { label: 'Terms & Condition', href: '/terms' }
         ],
         social: [
             { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },

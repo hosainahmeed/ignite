@@ -1,6 +1,7 @@
 'use client'
 import { Button, Checkbox, Divider, Form, Input, Select } from 'antd'
 import React from 'react'
+import { BsExclamationOctagon } from 'react-icons/bs'
 
 type FundOption = 'IGNITE Fund' | 'IGNITE a Child'
 type AmountTier = 'Spark' | 'Flame' | 'Blaze' | 'Inferno' | 'Custom'
@@ -84,6 +85,10 @@ function SupportAthletForm() {
 
     return (
         <div>
+            {fund === 'IGNITE a Child' && <div className="p-4 bg-[#4176FC0D] border border-[#4176FC]/50 mb-12 text-[#2863FA] mt-4 rounded-xl flex gap-2 justify-start items-start">
+                <BsExclamationOctagon className="leading-none m-0 p-0" size={20} />
+                <h1 className="flex gap-2">$1000 downpayment – full costs will range from $1500 to $8000+</h1>
+            </div>}
             <Form
                 form={form}
                 requiredMark={false}

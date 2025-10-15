@@ -16,7 +16,7 @@ function page() {
       <BeTheSpark />
       <WhoWeAre />
       <WhyDoWeNeed />
-      <div>
+      <div className="flex flex-col gap-12">
         <BeIGNITED />
         <JoinOurNetwork />
       </div>

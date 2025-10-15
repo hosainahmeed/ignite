@@ -10,7 +10,7 @@ function Page() {
         <div className="min-h-screen">
             <PageTopBanner
                 title="About Us"
-                description="The support young athletes need most — breaking barriers and fueling dreams."
+                description="The support that our young athletes need the most – breaking barriers and fueling dreams."
             />
 
             <section className="py-8 md:py-12 lg:py-16">
