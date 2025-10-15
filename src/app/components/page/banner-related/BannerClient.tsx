@@ -16,7 +16,7 @@ const BannerClient = ({ title, description, image }: BannerProps) => {
     return (
         <section
             ref={sectionRef}
-            className="w-full min-h-[calc(100dvh-60px)] py-16 md:pb-28 flex items-center justify-center bg-[#F5F7FA]"
+            className="w-full h-fit py-16  flex items-center justify-center bg-[#F5F7FA]"
             aria-labelledby="banner-title"
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">

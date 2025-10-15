@@ -38,7 +38,7 @@ function SideDescriber({
             <div className='w-1 h-full absolute top-0 -left-2 rounded-tr-full bg-gradient-to-b to-[#BF0A30] from-[#003F91]'></div>
             <div className='ml-4'>
                 {smallTitle && (
-                    <small className='text-[#4F5D75] text-base'>{smallTitle}</small>
+                    <small className='text-[#4F5D75] text-xl font-bold'>{smallTitle}</small>
                 )}
                 <h2 className='text-[36px] font-bold text-[#003F91]'>{title}</h2>
 
