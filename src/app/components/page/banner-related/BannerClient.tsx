@@ -26,7 +26,7 @@ const BannerClient = ({ title, description, image }: BannerProps) => {
                     animate={isInView ? "visible" : "hidden"}
                     className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16"
                 >
-                
+
                     {/* Text Content */}
                     <motion.div
                         variants={containerVariants}
@@ -51,7 +51,7 @@ const BannerClient = ({ title, description, image }: BannerProps) => {
                         {/* CTA Buttons */}
                         <motion.div
                             variants={containerVariants}
-                            className="flex flex-col md:flex-row gap-4 justify-center lg:justify-start"
+                            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                         >
                             <Link href='/donate'>
                                 <button className="bg-gradient-to-r text-white from-[#BF0A30] to-[#003F91] px-6 text-lg py-4 rounded cursor-pointer hover:!bg-white hover:!text-white">
@@ -62,8 +62,14 @@ const BannerClient = ({ title, description, image }: BannerProps) => {
                             <Link href="/ignite-my-child">
                                 <button className={cn("px-6 py-4 text-lg rounded border border-regal-blue cursor-pointer", "bg-white text-[#BF0A30] border-[#BF0A30] cursor-pointer")}>
                                     Nominate an Athlete
-                                </button></Link>
+                                </button>
+                            </Link>
                         </motion.div>
+                        <Link href="/join-our-club">
+                            <button className={cn("bg-gradient-to-r md:w-sm text-white from-[#BF0A30] to-[#003F91] px-6 text-lg py-4 rounded cursor-pointer hover:!bg-white hover:!text-white mt-3")}>
+                                Join the Be The Spark Club
+                            </button>
+                        </Link>
                     </motion.div>
 
                     {/* Image Content */}

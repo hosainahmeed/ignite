@@ -11,7 +11,7 @@ function page() {
 
   return (
     <div
-      className='bg-[#F5F7FA] flex items-center justify-center flex-col gap-0 md:gap-[120px]'>
+      className='bg-[#F5F7FA] overflow-hidden flex items-center justify-center flex-col gap-0 md:gap-[120px]'>
       <BannerServer />
       <BeTheSpark />
       <WhoWeAre />

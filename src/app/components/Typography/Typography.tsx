@@ -32,7 +32,7 @@ export default TypographyDescription;
 
 function TypographyHeading({ text, className }: { text: string, className?: string }) {
     return (
-        <h1 className={cn("text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight", className)}>{text}</h1>
+        <h1 className={cn("text-3xl capitalize sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight", className)}>{text}</h1>
     )
 }
 

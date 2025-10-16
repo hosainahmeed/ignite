@@ -58,7 +58,7 @@ function FaQ() {
                                     index: number
                                 ) => (
                                     <AccordionItem value={`item-${index + 1}`} key={index}>
-                                        <AccordionTrigger className="font-poppins capitalize  py-3 font-medium text-lg md:text-xl text-[#000] transition-all ease-in-out duration-300">
+                                        <AccordionTrigger className="font-poppins py-3 font-medium text-lg md:text-xl text-[#000] transition-all ease-in-out duration-300">
                                             {item?.question}
                                         </AccordionTrigger>
                                         <AccordionContent className="text-[#6B7280] leading-relaxed  py-3 text-base md:text-base">
